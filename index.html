@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Kumar Gond | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Rahul</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Rahul Kumar Gond</h1>
+
+<p>I'm a <span class="typing"></span></p>
+
+<p>
+Passionate about Artificial Intelligence,
+Machine Learning, Java Development and
+Web Technologies.
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<img src="profile.jpg" alt="Profile">
+
+<div class="about-text">
+
+<p>
+Hello! I am Rahul Kumar Gond, an AIML student passionate about
+Artificial Intelligence, Machine Learning, Java Programming,
+Data Structures & Algorithms and Web Development.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+<p>Java</p>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+<p>Python</p>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill">
+<p>HTML & CSS</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800">
+<div class="content">
+<h3>Flappy Bird Game</h3>
+<p>Built using HTML, CSS and JavaScript.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800">
+<div class="content">
+<h3>AI Resume Analyzer</h3>
+<p>Resume analysis project using Python.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800">
+<div class="content">
+<h3>Face Recognition Attendance</h3>
+<p>Attendance management using OpenCV.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="resume" class="resume">
+
+<h2 class="section-title">Resume</h2>
+
+<a href="resume.pdf" class="btn" download>
+Download Resume
+</a>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<div class="social">
+<a href="https://github.com/Rahul21-kumar"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fas fa-code"></i></a>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Rahul Kumar Gond | All Rights Reserved</p>
+</footer>
+
+<script>
+
+const texts = [
+"AI/ML Student",
+"Java Developer",
+"Web Developer",
+"Problem Solver"
+];
+
+let count = 0;
+let index = 0;
+
+(function type(){
+
+if(count === texts.length) count = 0;
+
+let current = texts[count];
+let letter = current.slice(0, ++index);
+
+document.querySelector(".typing").textContent = letter;
+
+if(letter.length === current.length){
+
+setTimeout(()=>{
+index = 0;
+count++;
+type();
+},1000);
+
+}else{
+setTimeout(type,120);
+}
+
+})();
+
+</script>
+
+</body>
+</html>
